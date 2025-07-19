@@ -4,12 +4,13 @@ import { StylesProvider } from '@mui/styles';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 import { ThemeProvider as StylesThemeProvider } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import './index.css'; 
 
 const theme = createTheme({
   palette: {
     background: {
       default: '#f8f9f9', // Soft white (from logo)
-      paper: '#f8f9f9',
+      paper: '#000000ff',
     },
     primary: {
       main: '#032d47', // Dark Blue
@@ -22,7 +23,7 @@ const theme = createTheme({
       contrastText: '#ffffff',
     },
     text: {
-      primary: '#032d47',  // Dark blue for better consistency
+      primary: '#17191aff',  // Dark blue for better consistency
       secondary: '#000000',
       disabled: '#9EA99D',
       title: '#ec2053',     // Pinkish red for titles
