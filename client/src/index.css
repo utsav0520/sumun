@@ -31,14 +31,14 @@ body {
   color: var(--color-primary);
 }
 
-.color-baground { background-color: #ffffff ; }
+.color-baground { background-color: #ffffff9c ; }
 .color-primary { background-color: #000000; }
 .color-secondary { background-color: #ffffff; }
 .color-pepar { background-color: #133131; }
 .color-navbar { background-color: #666666; } 
 .color-symbol { color: #7a7979bb; }
 .font-logo { font-family:Georgia, 'Times New Roman', Times, serif ; }
-.font-color-primary { color: #fefefe ; }
+.font-color-primary { color: #1a1919 ; }
 .font-color-secondary { color: #ffffffd2 ; }
 .font-color-navbar { color: #dde0e0 ; }
 .font-color-thired { color: #000000d2 ; }

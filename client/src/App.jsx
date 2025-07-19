@@ -6,6 +6,7 @@ import AppBar from './components/AppBar/AppBar.jsx';
 import Committes from './components/Committes/Committes.jsx';
 import Register from './components/Register/Register.jsx';
 import Resoures from './components/Resoures/Resoures.jsx';
+import './index.css';
 
 function App() {
   return (
