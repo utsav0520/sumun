@@ -4,10 +4,10 @@ import { makeStyles } from "@mui/styles";
 const sharedButton = (theme) => ({
   backgroundColor: `${theme.palette.custom.button.background} !important`,
   color: `${theme.palette.custom.button.text} !important`,
-  boxShadow: "5px 5px #999  !important",
+  boxShadow: `0px 5px ${theme.palette.custom.button.hoverShadow} !important`,
   "&:hover": {
-    color: `${theme.palette.custom.button.hoverText} !important`,
-    boxShadow: "5px 5px #000  !important",
+    color: `${theme.palette.custom.button.hoverTextSecondary} !important`,
+    boxShadow: `5px 0px ${theme.palette.custom.button.hoverShadow} !important`,
     fontWeight: "bold !important",
   },
   "&.Mui-disabled": {
@@ -29,14 +29,6 @@ export const useStyles = makeStyles((theme) => ({
     gap: 15,
     "&:hover": {
       backgroundColor: `${theme.palette.custom.button.hover} !important`,
-      color: `${theme.palette.custom.button.hoverText} !important`,
-      fontWeight: "bold !important",
-    },
-  },
-  searchButton: {
-    fontFamily: "monospace",
-    borderRadius: "25% !important",
-    "&:hover": {
       color: `${theme.palette.custom.button.hoverText} !important`,
       fontWeight: "bold !important",
     },

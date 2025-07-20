@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   AppBar as MuiAppBar,
   Toolbar,
@@ -13,12 +14,13 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import sumunHorizontalLogo from "../../../src/Storage/sumun-horizontal.svg";
-import sumunVerticalLogo from "../../../src/Storage/sumun-vertical.svg";
+// import sumunVerticalLogo from "../../../src/Storage/sumun-vertical.svg";
 import { useStyles } from "../../styles";
 
 function AppBar() {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
@@ -33,28 +35,22 @@ function AppBar() {
   ];
 
   return (
-    <>
-      <MuiAppBar
-        position="fixed"
-        style={{
-          boxShadow: "none",
-          color: "#000000",
-        }}
-        className=" flex mt-4 justify-between items-center "
-        >
-        <Toolbar className="flex justify-between gap-13 color-baground rounded-lg shadow-lg w-[90%] ">
+    <Box>
+      <MuiAppBar position="fixed" elevation={1} style={{ backgroundColor: "transparent", boxShadow: "none", color: "#000000", }} className=" flex mt-4 justify-between items-center " >
+        <Toolbar className="mx-auto w-[90%] max-w-[1200px] flex justify-between items-center rounded-[20px] shadow-lg color-baground">
           {/* Logo */}
           <div className="flex flex-col items-center gap-4">
             <img
               src={sumunHorizontalLogo}
               alt="SUMUN Horizontal Logo"
-              className="w-30 sm:w-40 hidden sm:block"
+              className="w-30 sm:w-40 ml-2 pl-2"
+              onClick={() => navigate("/")}
             />
-            <img
+            {/* <img
               src={sumunVerticalLogo}
               alt="SUMUN Vertical Logo"
-              className="w-20 sm:w-30 block sm:hidden"
-            />
+              className="w-15 h-14 pl-2 ml-2 sm:w-30 block sm:hidden"
+            /> */}
           </div>
 
           {/* Hamburger Menu (only on small screens) */}
@@ -113,7 +109,7 @@ function AppBar() {
         >
           <List>
             {navLinks.map(({ text, path }) => (
-              <ListItem 
+              <ListItem
                 button
                 key={text}
                 component={Link}
@@ -123,7 +119,7 @@ function AppBar() {
                   fontFamily: "Poppins",
                   fontSize: "15px",
                 }}
-                className="hover:bg-black hover:border-l-4 hover:border-black-500 text-[#0a0909] font-[Poppins] text-[15px] transition-all duration-200"
+                className="hover:bg-black hover:border-l-4 hover:border-black-500 hover:font-[bold]  font-[Poppins] text-[15px] transition-all duration-200"
               >
                 <ListItemText primary={text} />
               </ListItem>
@@ -131,7 +127,7 @@ function AppBar() {
           </List>
         </Box>
       </Drawer>
-    </>
+    </Box>
   );
 }
 
