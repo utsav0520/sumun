@@ -1,4 +1,7 @@
 @import "tailwindcss";   
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+
+
 :root {
   /* Colors */
   --color-primary: #000000;
@@ -22,6 +25,8 @@
   --font-primary: 'Roboto', Arial, sans-serif;
   --font-navbar: 'Poppins', sans-serif;
   --font-hover-text: Georgia, serif;
+
+  
 }
 
 /* Apply global font to body */
@@ -48,6 +53,10 @@ body {
 .approved-text { color:  #33c515;}
 .rejected-text { color:  #ff0000;}
 .panding-text { color:  #868686;}
+.font-oswald-custom {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
 
 .avatar-text { color: #1e1d1e   ; }
 .ButtonCSS {
