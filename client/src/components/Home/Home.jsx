@@ -1,4 +1,6 @@
 import React from "react";
+import GallaryComp from "./GallaryComp.jsx";
+
 function TopWaves() {
   return (
     <svg
@@ -51,7 +53,7 @@ function BottomWaves() {
 const Home = () => {
   return (
     <>
-      <div className="relative text-black min-h-screen  flex flex-col items-center justify-center overflow-hidden ">
+      <div className="relative font-color-sigin min-h-screen  flex flex-col items-center justify-center overflow-hidden ">
         {/* Top Waves */}
         <div className="absolute top-0 left-0 w-full rotate-180">
           <TopWaves />
@@ -61,7 +63,7 @@ const Home = () => {
         <div className="z-10 mt-40 mb-40 text-center">
           <h1 className="text-4xl sm:text-8xl font-oswald-custom  leading-snug ">
             <span className="block">VOICES THAT</span>
-            <span className="block text-[#F30133]">LEADS ...</span>
+            <span className="block color-prime">LEADS...</span>
           </h1>
         </div>
 
@@ -71,7 +73,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="h-[300px] text-black">
+      <div className="h-[300px] font-color-highight">
         <h2 className="text-center text-3xl font-semibold mt-10">
           Welcome to the Home Page
         </h2>
@@ -82,8 +84,8 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="bg-black test-white h-400">
-        utsav
+      <div className="text-black">
+        <GallaryComp />
       </div>
     </>
   );

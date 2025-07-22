@@ -36,8 +36,17 @@ function AppBar() {
 
   return (
     <Box>
-      <MuiAppBar position="fixed" elevation={1} style={{ backgroundColor: "transparent", boxShadow: "none", color: "#000000", }} className=" flex mt-4 justify-between items-center " >
-        <Toolbar className="mx-auto w-[90%] max-w-[1200px] flex justify-between items-center rounded-[20px] shadow-lg color-baground">
+      <MuiAppBar
+        position="fixed"
+        elevation={1}
+        style={{
+          backgroundColor: "transparent",
+          boxShadow: "none",
+          color: "#000000",
+        }}
+        className=" flex mt-4 justify-between items-center "
+      >
+        <Toolbar className="mx-auto w-[80%] max-w-[1200px] flex justify-between items-center rounded-[20px] shadow-lg color-headbackground">
           {/* Logo */}
           <div className="flex flex-col items-center gap-4">
             <img
@@ -99,31 +108,56 @@ function AppBar() {
         </Toolbar>
       </MuiAppBar>
 
-      {/* Drawer for small screen menu */}
-      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: "rgba(255, 255, 255, 0.4)",
+            backdropFilter: "blur(30px)",
+            boxShadow: "none",
+          },
+        }}
+      >
         <Box
-          sx={{ width: 150, height: 200 }}
+          sx={{ width: "100%", height: 200 }}
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
           <List>
-            {navLinks.map(({ text, path }) => (
-              <ListItem
-                button
-                key={text}
-                component={Link}
-                to={path}
-                style={{
-                  color: "#0a0909ff",
-                  fontFamily: "Poppins",
-                  fontSize: "15px",
-                }}
-                className="hover:bg-black hover:border-l-4 hover:border-black-500 hover:font-[bold]  font-[Poppins] text-[15px] transition-all duration-200"
-              >
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
+            {navLinks.map(
+              ({ text, path, isShown }) =>
+                isShown && (
+                  <ListItem
+                    button
+                    key={text}
+                    component={Link}
+                    to={path}
+                    style={{
+                      color: "#0a0909ff",
+                      fontFamily: "Poppins",
+                      fontSize: "15px",
+                    }}
+                    className="list-hoverClass font-[Poppins] text-[15px] transition-all duration-200"
+                  >
+                    <ListItemText primary={text} />
+                  </ListItem>
+                )
+            )}
+            <ListItem>
+              <div className="w-[130px]">
+                <Button
+                  key="Register"
+                  className={classes.ButtonUI}
+                  component={Link}
+                  to="/register"
+                >
+                  Register
+                </Button>
+              </div>
+            </ListItem>
           </List>
         </Box>
       </Drawer>
