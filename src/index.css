@@ -43,6 +43,12 @@ body {
   background-color: #000000;
 }
 
+.color-footer {
+  /* background: linear-gradient(to right, #b6d4b7, #9191ca); */
+  background: linear-gradient(to top right, #ffffff 0%, #ccffff 100%);
+}
+
+
 .color-secondary {
   background-color: #ffffff;
 }

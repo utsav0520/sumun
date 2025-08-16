@@ -22,6 +22,7 @@ export const useStyles = makeStyles((theme) => ({
   ButtonUI: {
     ...sharedButton(theme),
     width: "100%",
+    height : "45px",
     gap: 15,
   },
   NavBarButtonUI: {

@@ -14,8 +14,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 import sumunHorizontalLogo from "../../../src/Storage/sumun-horizontal.svg";
-// import sumunVerticalLogo from "../../../src/Storage/sumun-vertical.svg";
 import { useStyles } from "../../styles";
+import Register from '../../components/Register/Register'
 
 function AppBar() {
   const classes = useStyles();
@@ -55,11 +55,6 @@ function AppBar() {
               className="w-30 sm:w-40 ml-2 pl-2"
               onClick={() => navigate("/")}
             />
-            {/* <img
-              src={sumunVerticalLogo}
-              alt="SUMUN Vertical Logo"
-              className="w-15 h-14 pl-2 ml-2 sm:w-30 block sm:hidden"
-            /> */}
           </div>
 
           {/* Hamburger Menu (only on small screens) */}
@@ -93,15 +88,13 @@ function AppBar() {
             )}
           </Box>
 
-          <Box className="hidden sm:flex gap-4 ml-auto items-center ">
+          <Box className="hidden sm:flex gap-4 ml-auto items">
             <div>
               <Button
                 key="Register"
                 className={classes.ButtonUI}
-                component={Link}
-                to="/register"
               >
-                Register
+                <Register/>
               </Button>
             </div>
           </Box>
@@ -151,10 +144,8 @@ function AppBar() {
                 <Button
                   key="Register"
                   className={classes.ButtonUI}
-                  component={Link}
-                  to="/register"
                 >
-                  Register
+                <Register/>
                 </Button>
               </div>
             </ListItem>

@@ -1,5 +1,6 @@
 import React from "react";
-import GallaryComp from "./GallaryComp.jsx";
+import GallaryCompLeft from "./GallaryCompLeft.jsx";
+import GallaryCompRight from "./GallaryCompRight.jsx"
 
 function TopWaves() {
   return (
@@ -84,8 +85,9 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="text-black">
-        <GallaryComp />
+      <div className="text-black bg-white/5">
+        <GallaryCompLeft />
+        <GallaryCompRight />
       </div>
     </>
   );

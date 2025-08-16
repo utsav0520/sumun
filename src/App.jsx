@@ -10,14 +10,15 @@ import './index.css';
 
 function App() {
   return (
+    
     <BrowserRouter>
       <AppBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/committes-agenda" element={<Committes />} />
-        <Route path="/register" element={<Register />} />
         <Route path="/resources" element={<Resoures />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <AppFotter />
     </BrowserRouter>
